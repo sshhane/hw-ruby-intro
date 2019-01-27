@@ -1,12 +1,23 @@
 # When done, submit this entire file to the autograder.
 
 # Part 1
+# Define a method sum(array) that takes an array of 
+# integers as an argument and returns the sum of its elements. 
+# For an empty array it should return zero. Run associated tests via: 
+# $ rspec -e '#sum ' spec/part1_spec.rb
 
-def sum arr
-  # YOUR CODE HERE
+
+def sum(arr)
+  # sum array from position 0
+  arr.inject(0,:+)
 end
 
-def max_2_sum arr
+# my test cases
+raise 'sum([]) != 0' unless sum([]) == 0
+raise 'sum([1]) != 1' unless sum([1]) == 1
+raise 'sum([1,2,3]) != 6' unless sum([1,2,3]) == 6
+
+def max_2_sum(arr)
   # YOUR CODE HERE
 end
 
