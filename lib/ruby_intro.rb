@@ -32,9 +32,20 @@ raise 'max_2_sum([9]) != 9' unless max_2_sum([9]) == 9
 raise 'max_2_sum([1,2,3]) != 5' unless max_2_sum([1,2,3]) == 5
 raise 'max_2_sum([5,4,2,10]) != 15' unless max_2_sum([5,4,2,10]) == 15
 
-def sum_to_n? arr, n
-  # YOUR CODE HERE
+# Define a method sum_to_n?(array, n) that takes an array of integers and an additional integer,
+# n, as arguments and returns true if any two elements in the array of integers sum to n. sum_to_n?([], n)
+# should return false for any value of n, by definition. Run associated tests via: $ rspec -e '#sum_to_n' spec/part1_spec.rb
+def sum_to_n?(arr, n)
+  return false if arr.empty?
+  # returns true at first pair that sum to n
+  return true if arr.combination(2).find { |x, y| x + y == n }
+  # returns true at first pair that sum to n
 end
+
+# my test cases
+raise 'sum_to_n?([],0) != 0' unless sum_to_n?([], 0) == false
+raise 'sum_to_n?([2,2],4) != 0' unless sum_to_n?([2,2],4) == true
+raise 'sum_to_n?([2,6,2,5],4) != 0' unless sum_to_n?([2,6,2,5],4) == true
 
 # Part 2
 
