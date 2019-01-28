@@ -50,7 +50,7 @@ raise 'sum_to_n?([2,6,2,5],4) != 0' unless sum_to_n?([2,6,2,5],4) == true
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  "Hello, #{name}"
 end
 
 def starts_with_consonant? s
